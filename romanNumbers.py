@@ -11,11 +11,16 @@ numerals = {
 
 def indian_to_roman(number):
     roman = ''
+    previous = -1
     for numeral in numerals.keys():
         repeat = int(number / numeral)
         if repeat > 0:
-            roman += repeat * numerals[numeral]
+            if previous > 0 and repeat == 4:
+                roman += numerals[numeral] + numerals[previous]
+            else:
+                roman += repeat * numerals[numeral]
         number %= numeral
+        previous = numeral
     return roman
 
 
