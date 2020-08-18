@@ -10,7 +10,7 @@ numerals = {
 
 
 def indian_to_roman(number):
-    roman = ''
+    roman: str = ''
     previous = -1
     for numeral in numerals.keys():
         repeat = int(number / numeral)
@@ -25,8 +25,8 @@ def indian_to_roman(number):
 
 
 def roman():
-    num = int(input("Enter an Intiger number between 0-50: "))
-    if (num > 0):
+    num = int(input("Enter an integer number between 0-50: "))
+    if num > 0:
         print(indian_to_roman(number))
     else:
         print("Error!, number has to be 1 and less than or equals 50.")
