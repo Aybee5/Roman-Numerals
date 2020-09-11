@@ -29,4 +29,4 @@ def roman():
     if num > 0:
         print(indian_to_roman(number))
     else:
-        print("Error!, number has to be 1 and less than or equals 50.")
+        print("Error!, number has to be greater than 0.")
