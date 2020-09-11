@@ -25,7 +25,7 @@ def indian_to_roman(number):
 
 
 def roman():
-    num = int(input("Enter an integer number between 0-50: "))
+    num = int(input("Enter an integer greater than 0: "))
     if num > 0:
         print(indian_to_roman(number))
     else:
